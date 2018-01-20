@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登 录</title>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <h3 class="text-center">YFblog管理员登录</h3>
+            <dl class="form-group" id="name">
+                <dt>
+                    <label for="username">Username</label>
+                </dt>
+                <dd class="has-feedback">
+                    <input type="text" style="display:none" />
+                    <input type="text" autocomplete="off" class="form-control" id="username" name="username" placeholder="Pick a username" required pattern="^[\w\u4e00-\u9fa5!@#￥%&]{2,15}$">
+                    <span class="success glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display:none"></span>
+                    <span class="error glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display:none"></span>
+                </dd>
+            </dl>
+            <dl class="form-group" id="pass">
+                <dt>
+                    <label for="password">Password</label>
+                </dt>
+                <dd class="has-feedback">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Create a password" required pattern="^[\w!@#￥%&]{6,12}">
+                    <span class="success glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display:none"></span>
+                    <span class="error glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display:none"></span>
+                </dd>
+            </dl>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-info btn-large">Sign in</button>
+                <!-- <button type="submit" class="btn btn-success">Create an account</button> -->
+            </div>
+            <p>
+                <span style="color:#337AB7">忘记密码？</span>
+                <a href="register">新用户注册</a>
+            </p>
+            <p class="form-control-note">The copyright belongs to the developer.</p>
+        </form>
+    </div>
+
+    <script src="libs/jquery.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

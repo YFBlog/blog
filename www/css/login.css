@@ -1,0 +1,26 @@
+
+body{
+    background-color: #F3F3F3;
+}
+.container{
+    width: 350px;
+    padding-top: 60px;
+}
+.container>form>h3{
+    color: #60646F;
+}
+form button{
+    margin-top: 20px;
+    width: 95%;
+}
+.container>form>p:nth-of-type(1){
+    display: flex;
+    justify-content: space-between;
+}
+.container>form>p:nth-of-type(1)>a:hover{
+    text-decoration: none;
+}
+.container>form>p{
+    padding: 0 5%;
+    color: #686868;
+}

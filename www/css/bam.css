@@ -1,0 +1,126 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #2F4050;
+    width: 100%;
+}
+#container{
+    display: flex;
+}
+/* 左边栏 */
+#left p{
+    color: #A7B1C2;
+}
+#left strong{
+    color: white;
+}
+#left p:hover{
+    color: white;
+    cursor: pointer;
+    background-color: #293846;
+}
+#left>#show>div img{
+    margin: 10%;
+    border-radius: 50%;
+}
+#left>#show>div p{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10% 10%;
+}
+#left>#show>div:nth-of-type(2)>div>p{
+    padding: 5% 25%;
+}
+#left>#hide>div{
+    text-align: center;
+    font-size: 17px;
+    padding: 20px 0;
+}
+#left>#hide>div:nth-of-type(1){
+    background-color: #1AB394; 
+}
+#left>#hide>div:nth-of-type(2){
+    position: relative;
+}
+#left>#hide>div:nth-of-type(2)>div{
+    width: 130px;
+    position: absolute;
+    left: 60px;
+    padding: 10px;
+    top: 0;
+    text-align: left;
+    font-size: 15px;
+    background-color: #2F4050;
+    z-index: 2;
+}
+#left>#hide>div:nth-of-type(2)>div>p{
+    padding-left: 1em;
+    line-height: 2.5em;
+}
+/* 左边栏初始状态 */
+#left>div>div:nth-of-type(2){
+    background-color: #293846;
+    border-left: 5px solid #19AA8D;
+}
+#left>div>div:nth-of-type(2) p:nth-of-type(1){
+    color: white;
+    background-color: #293846;
+}
+
+/* 当屏幕宽度<500px时,侧边栏消失 */
+@media screen and (max-width: 500px) {
+    #left{
+        display: none;
+    }
+}
+
+/* 博客主体部分 */
+html,body,#container,#right,.panel,.well{
+    height: 100%;
+}
+#right{
+    width: 100%;
+    position: relative;
+}
+.panel{
+    margin: 0;
+    width: 100%;
+    background-color: #F3F3F4;
+}
+.panel-body{
+    height: 88%;
+}
+.panel-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.panel-heading .right{
+    color: #999C9E;
+}
+.panel-heading #logOut:hover{
+    cursor: pointer;
+}
+.panel-footer{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.well{
+    overflow: scroll;
+    background-color: white;
+}
+#article{
+    padding: 0;
+}
+#article>nav{
+    padding: 0.5em 1.2em;
+}
+#article>div{
+    padding: 1em 2em;
+}
+

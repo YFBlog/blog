@@ -1,0 +1,14 @@
+
+body{
+    background-color: #F3F3F3;
+}
+.container{
+    width: 350px;
+    padding-top: 60px;
+}
+.container>form>h3{
+    color: #60646F;
+}
+.container>form>p{
+    color: #686868;
+}

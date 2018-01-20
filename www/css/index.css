@@ -1,0 +1,92 @@
+
+html,body,body>div,.row{
+    height: 100%;
+}
+
+/* 博客侧边栏 */
+.sidebar{
+    padding: 1rem;
+}
+h1{
+    font-style: oblique;
+    font-weight: bolder;
+    color: #83D5D1;
+    background-color: #333333;
+    border-radius: 10px;
+    padding: 0.3em;
+}
+h1 span{
+    color: #EAE655;
+}
+.sidebar ol>li{
+    padding: 1em; 
+}
+.sidebar ol>li>a{
+    color: #334141;
+    text-decoration: none;
+}
+.blog-sidebar .footer>p{
+    text-align: center;
+}
+.blog-sidebar .footer>p>a{
+    color: #999999;
+}
+nav{
+    border-radius: 5px;
+}
+@media (min-width: 768px) {
+    .blog-sidebar{
+        height: 100%;
+        position: relative;
+    }
+    .blog-sidebar .footer{
+        position: absolute;
+        bottom: 0;
+        color: #999999;
+    }
+}
+@media (max-width: 768px) { 
+    h1{
+        display: inline-block;
+    }
+}
+/* 博客主题 */
+.blog-main .blog-post{
+    padding: 2%;
+}
+.blog-main header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #DBE0E6;
+    padding: 0.5em 1.5em;
+}
+.blog-main header>h2{
+    margin: 0;
+}
+.blog-main header>span{
+    color: #6A7AA3;
+}
+.blog-main .blog-post>blockquote>p{
+    margin: 1em 0.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    color: #999999;
+}
+.blog-main .blog-post>blockquote ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    color: #B6AAC0;
+    font-size: 17px;
+}
+.blog-main .blog-post>blockquote ul a{
+    color: black;
+}
+.blog-main .blog-post>blockquote ul a:hover{
+    color: red;
+}
+

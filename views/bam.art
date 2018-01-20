@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户首页</title>
+    <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bam.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="left">
+            <div id="show" style="width:220px;">
+                <div>
+                    <img src="/images/icon.png" alt="图片异常无法显示" style="width:50px;">
+                </div>
+                <div class="blogmanage">
+                    <p>
+                        <span class="glyphicon glyphicon-th-large">&nbsp;博客管理</span>
+                        <span class="glyphicon glyphicon-menu-down arrow"></span>
+                        <span class="glyphicon glyphicon-menu-left arrow" style="display:none"></span>
+                    </p>
+                    <div>
+                        <p class="writeBlog">写博客</p>
+                        <p class="article">博客文章管理</p>
+                    </div>
+                </div>
+                <div class="visitUser">
+                    <p>
+                        <span class="glyphicon glyphicon-eye-open">&nbsp;访问数据用户</span>
+                    </p>
+                </div>
+            </div>
+            <div id="hide" style="width:70px;display:none;">
+                <div>
+                    <strong>YFblog</strong>
+                </div>
+                <div class="blogmanage">
+                    <p class="glyphicon glyphicon-th-large"></p>
+                    <div style="display:none">
+                        <p class="writeBlog">写博客</p>
+                        <p class="article">博客文章管理</p>
+                    </div>
+                </div>
+                <div class="visitUser" onclic="location.href = '/bam/userdata'">
+                    <p class="glyphicon glyphicon-eye-open"></p>
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <button type="button" class="btn btn-success glyphicon glyphicon-menu-hamburger" id="menu"></button>
+                    <div class="right">
+                        <span>欢迎来到YFblog管理后台</span>&#x3000;
+                        <span id="logOut" class="glyphicon glyphicon-log-out"> 退出登录</span>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="well" id="writeBlog">
+                        <h3>写博客--
+                            <small>YFblog后台管理系统</small>
+                        </h3>
+                        <form action="" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="title" class="col-sm-2 control-label">文章标题：</label>
+                                <div class="col-md-7 col-sm-10">
+                                    <input type="text" name="title" class="form-control" id="title" placeholder="请输入文章标题">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="author" class="col-sm-2 control-label">发布者：</label>
+                                <div class="col-md-7 col-sm-10">
+                                    <input type="text" name="author" class="form-control" id="author" placeholder="Yuanfang">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="kind" class="col-sm-2 control-label">博客类别：</label>
+                                <div class="col-md-7 col-sm-10">
+                                    <select name="kind" id="kind" class="form-control">
+                                        <option value="NodeJS">NodeJS</option>
+                                        <option value="JavaScript" selected>JavaScript</option>
+                                        <option value="Environment">Environment</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="content" class="col-sm-2 control-label">博客内容：</label>
+                                <div class="col-sm-9">
+                                    <script id="editor" type="text/plain" style="width:100%;height:400px;">
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-success" style="padding:0.5em 2em">添加</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="well" id="article" style="display:none">
+                        <nav class="navbar navbar-default">
+                            <button type="button" class="btn btn-info navbar-btn">写博客</button>
+                        </nav>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                               
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="well" id="visitUser" style="display:none">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr class="active" style="color:#676A6C">
+                                        <th>ID</th>
+                                        <th>IP地址</th>
+                                        <th>cxIP地址</th>
+                                        <th>cx地理位置</th>
+                                        <th>cx浏览器</th>
+                                        <th>cx浏览系统 </th>
+                                        <th>高德地理位置</th>
+                                        <th>访问时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="color:#676A6C">
+                                        <td>952</td>
+                                        <td>::ffff:192.168.1.160</td>
+                                        <td>129.168.1.110</td>
+                                        <td>查询网无法定位</td>
+                                        <td>Mozilla/5.0 (Windows NT 6.1; WOW64; rv:57.0) Gecko/20100101 Firefox/57.0</td>
+                                        <td>Windows NT 6.1; WOW64</td>
+                                        <td>江苏省南京市江宁区东山街道天印大道680号石羊公园</td>
+                                        <td>2018-01-16 14:20:54</td>
+                                        <td>
+                                            <button class="btn btn-danger">删除记录</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    The copyright belongs to the developer.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" charset="utf-8" src="/libs/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/libs/ueditor/ueditor.all.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/libs/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script src="libs/jquery.js"></script>
+    <script>
+        var ue = UE.getEditor('editor');
+    </script>
+    <script src="/libs/bootstrap/js/bootstrap.js"></script>
+    <script src="/js/bam.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注 册</title>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <h3 class="text-center">YFblog管理员注册</h3>
+            <dl class="form-group">
+                <dt>
+                    <label for="username">Username</label>
+                </dt>
+                <dd class="has-feedback" id="name">
+                    <input type="text" style="display:none" />
+                    <input type="text" autocomplete="off" class="form-control" id="username" name="username" placeholder="Pick a username" required
+                        pattern="^[\w\u4e00-\u9fa5!@#￥%&]{2,15}$">
+                    <span class="success glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display:none"></span>
+                    <span class="error glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display:none"></span>
+                </dd>
+            </dl>
+            <dl class="form-group">
+                <dt>
+                    <label for="password">Password</label>
+                </dt>
+                <dd class="has-feedback password">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Create a password" required pattern="^[\w!@#￥%&]{6,12}">
+                    <span class="success glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display:none"></span>
+                    <span class="error glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display:none"></span>
+                </dd>
+            </dl>
+            <dl class="form-group">
+                <dt>
+                    <label for="confirm">Confirm</label>
+                </dt>
+                <dd class="has-feedback confirm">
+                    <input type="password" class="form-control" id="confirm" placeholder="Confirm password" required pattern="^[\w!@#￥%&]{6,12}">
+                    <span class="success glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display:none"></span>
+                    <span class="error glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display:none"></span>
+                </dd>
+            </dl>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Create an account</button>
+            </div>
+            <p class="form-control-note">The copyright belongs to the developer.</p>
+        </form>
+    </div>
+
+    <script src="libs/jquery.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.js"></script>
+    <script src="js/register.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<table class="table table-bordered">
+    <thead>
+        <tr class="active" style="color:#676A6C">
+            <th>博客ID</th>
+            <th>分类</th>
+            <th>博客标题</th>
+            <th>发布者</th>
+            <th>发布时间</th>
+            <th>浏览数</th>
+            <th>点赞数</th>
+            <th>评论数</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{each articles article}}
+        <tr style="color:#676A6C">
+            <td>6</td>
+            <td>{{article.kind}}</td>
+            <td>{{article.title}}</td>
+            <td>{{article.author}}</td>
+            <td>{{article.date}}</td>
+            <td>55</td>
+            <td>11</td>
+            <td>未开放</td>
+            <td>
+                <button class="btn btn-success">修改博客</button>
+                <button class="btn btn-danger">删除博客</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
